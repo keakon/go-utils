@@ -1,0 +1,13 @@
+stages:
+  - test
+
+
+variables:
+  IMAGE_NAME: utils
+
+test:
+  stage: test
+  tags:
+    - ubuntu
+  script:
+    - docker build -t "$IMAGE_NAME:$CI_COMMIT_SHORT_SHA" .
