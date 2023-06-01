@@ -2,7 +2,7 @@ FROM hub.yizhisec.com/mirror/ubuntu:18.04
 
 # 安装依赖
 RUN apt update && apt install -y ca-certificates && update-ca-certificates \
-    && sed -i "s@http://\(archive\|security\).ubuntu.com@https://mirror.yizhisec.com@g" /etc/apt/sources.list \
+    && sed -i "s@http://\(archive\|security\).ubuntu.com@https://mirror.yizhisec.com/ubuntu@g" /etc/apt/sources.list \
     && apt update \
     && apt upgrade -y \
     && DEBIAN_FRONTEND=noninteractive apt install -y --no-install-recommends wget tar build-essential pkg-config tzdata \
