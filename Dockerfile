@@ -10,7 +10,7 @@ RUN apt update && apt install -y ca-certificates && update-ca-certificates \
     && dpkg-reconfigure -f noninteractive tzdata
 
 # 安装 golang 环境
-RUN wget https://mirror.yizhisec.com/go/go1.19.4.linux-amd64.tar.gz \
+RUN wget https://artifactory.yizhisec.com/artifactory/filestore/go/go1.19.4.linux-amd64.tar.gz \
     && tar -C /usr/local -xzf go*.linux-amd64.tar.gz \
     && rm go*.linux-amd64.tar.gz
 
